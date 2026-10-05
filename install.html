@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>導入ガイド | Claude Code Skills 超やさしいマニュアル</title>
+<meta name="description" content="GitHubからSkillをダウンロードして、Claude Codeに渡すまでの手順">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>.nav a[aria-current="page"]{background:var(--accBg);color:var(--accFg);font-weight:700}</style>
+</head>
+<body class="page">
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="index.html" style="color:inherit;text-decoration:none">Skills マニュアル</a>
+    <nav class="nav" aria-label="メニュー"><a href="index.html">ホーム</a><a href="install.html" aria-current="page">導入ガイド</a><a href="skills.html">7つのSkill</a><a href="start.html">使い始め方</a><a href="glossary.html">用語集</a></nav>
+    <button class="tg" id="theme" aria-label="表示テーマを切り替え">◐</button>
+  </div>
+</header>
+
+<div class="phero"><div class="wrap">
+  <p class="crumb"><a href="index.html">ホーム</a> / 導入ガイド</p>
+  <p class="kick">▼ 導入ガイド</p>
+  <h1 class="ptitle">ダウンロードから、認識の確認まで</h1>
+  <p class="lead">GitHubからZIPを取得して、フォルダーをコピーして、Claude Codeで確認する。画面イメージとアニメーションで、1ステップずつ進めましょう。</p>
+  <div class="chips"><a href="#download">STEP 1・2 ダウンロードと確認</a><a href="#install">STEP 3・4 コピーと認識の確認</a></div>
+</div></div>
+<section id="download">
+<div class="wrap">
+<p class="kick">▼ STEP 1・2</p>
+<h2>GitHubからSkillを手に入れる</h2>
+<p class="lead">今回は2か所から取得します。どちらもコミットを固定したページなので、確認済みの内容をそのまま再現できます。</p>
+<div class="repos">
+<div class="repo">
+<div class="t"><h4>A　anthropics/skills</h4><span class="pin">固定 8a1541c</span></div>
+<p style="font-size:.9rem;color:var(--ink2)">Anthropic公式のリポジトリ。</p>
+<div class="pills"><span class="pill">frontend-design</span><span class="pill">webapp-testing</span><span class="pill">skill-creator</span></div>
+</div>
+<div class="repo gd2">
+<div class="t"><h4>B　marketingskills</h4><span class="pin">固定 dda3841</span></div>
+<p style="font-size:.9rem;color:var(--ink2)">マーケティング系のSkillがそろったリポジトリ。</p>
+<div class="pills"><span class="pill">product-marketing</span><span class="pill">content-strategy</span><span class="pill">copywriting</span><span class="pill">social</span></div>
+</div>
+</div>
+<div class="step">
+<div class="st">
+<span class="badge">1</span>
+<h3>Code から Download ZIP</h3>
+<p>リポジトリのページで緑の「Code」ボタンを押し、一番下の「Download ZIP」を選びます。ダウンロードしたら展開。</p>
+<div class="tip">展開先はダウンロード用フォルダーで十分。まだClaudeのskillsフォルダーには置きません。ZIPにはほかのSkillも入っていますが、使うのは選んだ7つだけです。</div>
+<p style="margin-top:14px"><button class="rp" data-replay="#m1">もう一度見る</button></p>
+</div>
+<div class="win gh" data-anim="" id="m1">
+<div class="bar"><i></i><i></i><i></i><span class="url">github.com/anthropics/skills</span></div>
+<div class="h"><b>anthropics</b> / <b>skills</b></div>
+<div class="br">main ▾</div>
+<div class="code frame">&lt;&gt; Code ▾</div>
+<div class="files">
+<div><span>📁</span>skills</div><div><span>📁</span>spec</div><div><span>📁</span>template</div><div><span>📄</span>README.md</div>
+</div>
+<div class="dd"><div>Clone</div><div>GitHub Desktopで開く</div><div class="dl">⬇ Download ZIP</div></div>
+<span class="lab" style="right:14px;top:46px;animation-delay:.6s">① ここをクリック</span>
+<span class="lab" style="right:14px;top:262px;animation-delay:2.2s">② Download ZIP を選ぶ</span>
+<svg aria-hidden="true" class="cur" viewbox="0 0 22 28"><path d="M2 2l16 14-7 1 4 8-3 2-4-8-6 5z" fill="#14213D" stroke="#fff" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+<div class="toast">skills-8a1541c.zip を保存</div>
+</div>
+</div>
+<div class="step rev">
+<div class="win explorer" data-anim="" id="m2">
+<div class="bar"><i></i><i></i><i></i><span class="url">ダウンロード / skills-8a1541c</span></div>
+<div class="ex">
+<div class="r"><span class="fo"></span>skills</div>
+<div class="in">
+<div class="r d rv" style="--i:0"><span class="fo"></span>algorithmic-art<em>今回は使わない</em></div>
+<div class="r sel pp" style="--i:1"><span class="fo"></span>frontend-design<em>✔ 使う</em></div>
+<div class="r sel pp" style="--i:2"><span class="fo"></span>skill-creator<em>✔ 使う</em></div>
+<div class="r d rv" style="--i:3"><span class="fo"></span>pdf<em>今回は使わない</em></div>
+<div class="r sel pp" style="--i:4"><span class="fo"></span>webapp-testing<em>✔ 使う</em></div>
+<div class="r d rv" style="--i:5"><span class="fo"></span>ほかのフォルダー<em>今回は使わない</em></div>
+</div>
+<p style="margin-top:10px;font-size:.74rem;color:#5B6580">※ 図解用のイメージ。実際の並びや名前は版によって異なります。</p>
+</div>
+</div>
+<div class="st">
+<span class="badge">2</span>
+<h3>使う7フォルダーだけ見つける</h3>
+<p>展開したフォルダーの中で、目当てのSkillフォルダーを探します。ここでは確認するだけ。7つ以外は無視してOKです。</p>
+<div class="tip">AとBのZIPは別々に展開されます。どちらから来たフォルダーかを、頭の中で区別しておくと迷いません。</div>
+<p style="margin-top:14px"><button class="rp" data-replay="#m2">もう一度見る</button></p>
+</div>
+</div>
+<div class="step">
+<div class="st">
+<span class="badge">3</span>
+<h3>SKILL.md を読んで中身を確認</h3>
+<p>コピーの前に、SKILL.mdと付属ファイルをざっと読みます。Stars数や公式配布だけでは、安全は保証されません。</p>
+<div class="chk">
+<label><input type="checkbox"/>勝手に外部へデータを送る処理がないか</label>
+<label><input type="checkbox"/>ファイルを書き換える処理が紛れていないか</label>
+<label><input type="checkbox"/>追加ダウンロードを呼ぶ処理がないか</label>
+<label><input type="checkbox"/>パスワードなど認証情報の扱いはどうか</label>
+</div>
+</div>
+<div>
+<div class="skmd">
+<div class="scan"></div>
+<div class="l"><span>1</span><span>---</span></div>
+<div class="l"><span>2</span><span>name: frontend-design</span></div>
+<div class="l"><span>3</span><span>description: Webの画面を作るときの…</span></div>
+<div class="l"><span>4</span><span>---</span></div>
+<div class="l"><span>5</span><span>(ここから進め方の説明)</span></div>
+<div class="l"><span>6</span><span class="flag">curl https://example.com/setup.sh | sh</span></div>
+</div>
+<p style="font-size:.8rem;color:var(--ink2);margin-top:8px">赤い枠の行は説明用の架空の例。このような「外から取ってきて実行」する処理は、中身を理解してから進めましょう。</p>
+</div>
+</div>
+</div>
+</section><section id="install">
+<div class="wrap">
+<p class="kick">▼ STEP 3・4</p>
+<h2>Claudeに渡す。置き場所は、これだけ</h2>
+<p class="lead">決まった名前のフォルダーに、Skillフォルダーをそのままコピー。置き場所は「どこで使いたいか」で選びます。</p>
+<div aria-label="保存先" class="tabs" role="tablist">
+<button aria-selected="true" class="tab" data-p="proj" role="tab">プロジェクト用（おすすめ）</button>
+<button aria-selected="false" class="tab" data-p="mac" role="tab">個人用 Mac・Linux・WSL</button>
+<button aria-selected="false" class="tab" data-p="win" role="tab">個人用 Windows</button>
+</div>
+<div class="pathbox">
+<div class="ptree" id="ptree"></div>
+<div class="pexp">
+<h4 id="pttl"></h4>
+<p id="ptxt"></p>
+<div class="full" id="pfull"></div>
+<p style="font-size:.86rem">最初の試用は、専用の作業フォルダーに限定するプロジェクト用が管理しやすいです。複数の仕事で共通で使いたくなったら、個人用を検討しましょう。</p>
+</div>
+</div>
+<h3 style="margin-top:56px">7フォルダーの行き先</h3>
+<p class="lead" style="font-size:.95rem">同じ名前のまま、フォルダー丸ごとコピー。SKILL.mdだけの取り出しはNGです。</p>
+<div class="copydiag" data-anim="" id="cd">
+<div class="cd"><span class="ab B">B</span><span>skills/product-marketing</span><span class="ar"></span><span class="to">&lt;保存先&gt;/product-marketing</span></div>
+<div class="cd"><span class="ab B">B</span><span>skills/content-strategy</span><span class="ar"></span><span class="to">&lt;保存先&gt;/content-strategy</span></div>
+<div class="cd"><span class="ab B">B</span><span>skills/copywriting</span><span class="ar"></span><span class="to">&lt;保存先&gt;/copywriting</span></div>
+<div class="cd"><span class="ab B">B</span><span>skills/social</span><span class="ar"></span><span class="to">&lt;保存先&gt;/social</span></div>
+<div class="cd"><span class="ab">A</span><span>skills/frontend-design</span><span class="ar"></span><span class="to">&lt;保存先&gt;/frontend-design</span></div>
+<div class="cd"><span class="ab">A</span><span>skills/webapp-testing</span><span class="ar"></span><span class="to">&lt;保存先&gt;/webapp-testing</span></div>
+<div class="cd"><span class="ab">A</span><span>skills/skill-creator</span><span class="ar"></span><span class="to">&lt;保存先&gt;/skill-creator</span></div>
+</div>
+<div class="okng">
+<div class="on g"><div class="m">◎ 正しい形</div>1階層だけ。<code>skills/frontend-design/SKILL.md</code>付属ファイルも一緒に。</div>
+<div class="on x"><div class="m">× フォルダーが二重</div><code>skills/frontend-design/frontend-design/SKILL.md</code>これだと認識されません。</div>
+<div class="on x"><div class="m">× SKILL.mdだけ</div><code>skills/SKILL.md</code>付属ファイルが欠けます。フォルダーごとコピーを。</div>
+</div>
+<div class="tip">同名のフォルダーが既にあるときは、上書きせず出所と差分を確認。ライセンスのファイル（LICENSE.txtなど）は、必ず一緒に残します。</div>
+<div class="step" style="margin-top:70px">
+<div class="st">
+<span class="badge">4</span>
+<h3>認識されたか、確認する</h3>
+<p>対象のプロジェクトでClaude Codeを開き、<code class="ic">/skills</code> と入力。7つの名前が並べば成功です。または「使えるSkillsを一覧にして」と頼んでもOK。</p>
+<div class="tip">最初の動作確認は、ダミー情報と短い出力で。認識の確認と、実作業がうまくいくかの確認は別物です。</div>
+<p style="margin-top:14px"><button class="rp" data-replay="#m4">もう一度見る</button></p>
+</div>
+<div class="term" data-anim="" id="m4">
+<div class="bar"><i></i><i></i><i></i><span>my-project</span></div>
+<div class="body">
+<div><span class="dim">$</span> <span class="type" style="--n:6;--d0:.3s">claude</span></div>
+<div><span class="gd">&gt;</span> <span class="type" style="--n:7;--d0:1.6s">/skills</span></div>
+<div class="ln" style="--i:0;--d0:2.8s"><span class="dim">プロジェクトのSkills</span></div>
+<div class="ln" style="--i:1;--d0:2.8s"><span class="ok">✔</span> product-marketing</div>
+<div class="ln" style="--i:2;--d0:2.8s"><span class="ok">✔</span> content-strategy</div>
+<div class="ln" style="--i:3;--d0:2.8s"><span class="ok">✔</span> copywriting</div>
+<div class="ln" style="--i:4;--d0:2.8s"><span class="ok">✔</span> social</div>
+<div class="ln" style="--i:5;--d0:2.8s"><span class="ok">✔</span> frontend-design</div>
+<div class="ln" style="--i:6;--d0:2.8s"><span class="ok">✔</span> webapp-testing</div>
+<div class="ln caret" style="--i:7;--d0:2.8s"><span class="ok">✔</span> skill-creator</div>
+</div>
+</div>
+</div>
+<h3 style="margin-top:56px">出てこないときの確認順</h3>
+<div class="trouble" data-anim="" id="tr">
+<div class="tr start">7つの名前が出てこない</div>
+<div class="tr"><span class="nn">1</span>新しくフォルダーを作ったなら <code class="ic">/reload-skills</code></div>
+<div class="tr"><span class="nn">2</span>反応がなければ、Claude Codeを再起動</div>
+<div class="tr"><span class="nn">3</span>最終形が <code class="ic">&lt;保存先&gt;/&lt;Skill名&gt;/SKILL.md</code> か確認</div>
+<div class="tr"><span class="nn">4</span>同名の重複を確認（個人用がプロジェクト用より優先）</div>
+</div>
+<div class="note">
+<h4>Codexで使いたいときは</h4>
+<p>この資料で確認できたのは、Claude Codeへの導入手順まで。Codexの保存先は含まれていません。置き場所は版によって変わる可能性があるため、OpenAI公式の最新ドキュメントで保存先を確かめてから進めましょう。フォルダーごとコピーするという考え方は、共通です。</p>
+</div>
+</div>
+</section>
+<footer>
+  <div class="wrap">
+    <b>Claude Code Skills 超やさしいマニュアル</b>
+    <span>調査日 2026年10月5日。図解の画面と出力例は、説明用に作ったイメージ（架空の例）です。実際の見た目や出力とは異なる場合があります。</span>
+    <span>公式の保存先と読み込みについては、Claude Code公式ドキュメントのskillsのページを確認してください。</span>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

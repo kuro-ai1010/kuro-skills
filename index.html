@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>トップ | Claude Code Skills 超やさしいマニュアル</title>
+<meta name="description" content="Claude Codeの7つのSkillを、導入から使い方まで図解で解説する初心者向けマニュアル">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>.nav a[aria-current="page"]{background:var(--accBg);color:var(--accFg);font-weight:700}</style>
+</head>
+<body class="">
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="index.html" style="color:inherit;text-decoration:none">Skills マニュアル</a>
+    <nav class="nav" aria-label="メニュー"><a href="index.html" aria-current="page">ホーム</a><a href="install.html">導入ガイド</a><a href="skills.html">7つのSkill</a><a href="start.html">使い始め方</a><a href="glossary.html">用語集</a></nav>
+    <button class="tg" id="theme" aria-label="表示テーマを切り替え">◐</button>
+  </div>
+</header>
+<div class="hero">
+<div class="wrap">
+<div>
+<p class="kick">▼ Claude Code 初心者向け</p>
+<h1>Claude Codeに、<br/>仕事の型を覚えさせよう</h1>
+<p class="lead">ダウンロードして、フォルダーをコピーして、認識を確認する。Skillの導入は、実はこの流れだけ。Gitの知識もいりません。画面イメージとアニメーションで、1つずつ迷わず進めます。</p>
+<div class="btns">
+<a class="btn pri" href="install.html">ダウンロード手順を見る</a>
+<a class="btn" href="skills.html">7つのSkillを見る</a>
+</div>
+</div>
+<div class="stage" data-anim="" data-loop="11000" id="heroStage">
+<div class="st-src">
+<svg aria-hidden="true" viewbox="0 0 54 44"><path d="M2 8a4 4 0 0 1 4-4h14l5 6h23a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#E6B84A"></path><path d="M2 16h50v20a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#F3CB66"></path></svg>
+<div><b>frontend-design/</b><small>ダウンロードして展開したフォルダー</small></div>
+</div>
+<div class="st-path"><div class="doc">SKILL.md</div></div>
+<div class="term">
+<div class="bar"><i></i><i></i><i></i><span>Claude Code</span></div>
+<div class="body">
+<div><span class="gd">&gt;</span> <span class="type" style="--n:7;--d0:2.8s">/skills</span></div>
+<div class="ln" style="--i:0;--d0:3.9s"><span class="dim">見つかったSkill</span></div>
+<div class="ln" style="--i:1;--d0:3.9s"><span class="ok">✔</span> product-marketing</div>
+<div class="ln" style="--i:2;--d0:3.9s"><span class="ok">✔</span> copywriting</div>
+<div class="ln" style="--i:3;--d0:3.9s"><span class="ok">✔</span> frontend-design <span class="gd">NEW</span></div>
+<div class="ln caret" style="--i:4;--d0:3.9s"><span class="dim">ほか4件</span></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="wrap"><div class="flow" data-anim="" id="flow">
+<div class="fs" style="--i:0"><div class="n">1</div><h4>ZIPを取得</h4><p>GitHubからDownload ZIP。展開はダウンロード用フォルダーへ。</p><span class="bar"></span></div>
+<div class="fs" style="--i:1"><div class="n">2</div><h4>中身をチェック</h4><p>SKILL.mdと付属ファイルを読んで、安全面を確認。</p><span class="bar"></span></div>
+<div class="fs" style="--i:2"><div class="n">3</div><h4>フォルダーごとコピー</h4><p>.claude/skills の中へ、名前そのままで配置。</p><span class="bar"></span></div>
+<div class="fs" style="--i:3"><div class="n">4</div><h4>認識を確認</h4><p>/skills で名前が並べばOK。まずは短い試運転から。</p><span class="bar"></span></div>
+</div></div><section id="what">
+<div class="wrap">
+<p class="kick">▼ 基礎知識</p>
+<h2>Skillは、AIのための<br/>取扱説明書フォルダー</h2>
+<p class="lead">中心にあるのは SKILL.md という1枚の手順書。Claudeは必要になったときだけ読みに行き、書いてある通りの進め方で仕事を始めます。</p>
+<div class="two">
+<div class="tree" data-anim="" id="anat">
+<div class="root">📁 frontend-design/ <span style="font-family:var(--sans);color:var(--gold);font-size:.8rem;font-weight:700">この全体が1つのSkill</span></div>
+<div class="row hot rv" style="--i:0"><b>SKILL.md</b><span>いちばん大事な手順書。名前と説明、進め方が書いてある。</span></div>
+<div class="row rv" style="--i:1"><b>scripts/</b><span>必要なときだけ動く補助プログラム。ないSkillもある。</span></div>
+<div class="row rv" style="--i:2"><b>references/</b><span>参考資料や詳しい説明。Skillごとに名前や中身が違う。</span></div>
+<div class="row rv" style="--i:3"><b>LICENSE.txt</b><span>使ってよい条件の書類。消さずに一緒に残す。</span></div>
+<button class="rp" data-replay="#anat" style="margin-top:12px">もう一度見る</button>
+</div>
+<div class="ba" data-anim="" id="ba">
+<div class="pane before">
+<h4>▼ Skillがないとき</h4>
+<div class="chat">毎回、長い指示を貼り付け…</div>
+<div class="sk-lines" style="margin-top:8px"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="meter"><i style="--w:92%"></i></div>
+<p class="cap">毎回の準備の手間。使うたびに積み重なる。</p>
+</div>
+<div class="pane after">
+<h4>▼ Skillがあるとき</h4>
+<div class="chat">/copywriting この講座の販売ページを下書きして</div>
+<div class="meter"><i style="--w:14%"></i></div>
+<p class="cap">一言で呼び出し。手順書はClaudeが読みに行く。</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="why">
+<div class="wrap">
+<p class="kick">▼ 導入のメリット</p>
+<h2>入れておくと、毎日の作業が軽くなる</h2>
+<div class="ben">
+<div class="b">
+<svg aria-hidden="true" viewbox="0 0 84 84"><rect fill="none" height="60" rx="5" stroke="currentColor" stroke-width="3" style="color:var(--line)" width="46" x="10" y="12"></rect><path d="M20 28h26M20 38h26M20 48h16" stroke="var(--line)" stroke-linecap="round" stroke-width="3"></path><circle cx="58" cy="56" fill="var(--gold)" r="20"></circle><path d="M48 56l7 7 12-14" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path></svg>
+<div><h4>長い指示を、貼らなくていい</h4><p>「誰向けで、どんな口調で」の説明を毎回する必要なし。呼び出しは一言で済みます。</p></div>
+<span class="chip">時短</span>
+</div>
+<div class="b">
+<svg aria-hidden="true" viewbox="0 0 84 84"><g fill="none" stroke-linecap="round" stroke-width="3.5"><path d="M10 60c10 0 10-30 20-30s10 30 20 30 10-30 24-30" opacity=".35" stroke="var(--red)"></path><path d="M10 44h64" stroke="var(--teal)"></path></g><circle cx="42" cy="44" fill="var(--teal)" r="7"></circle></svg>
+<div><h4>出来栄えのブレが減る</h4><p>同じ手順書を読むので、今日と来週で仕上がりが変わりにくい。安定した品質が手に入ります。</p></div>
+<span class="chip">安定</span>
+</div>
+<div class="b">
+<svg aria-hidden="true" viewbox="0 0 84 84"><path d="M42 8l10 22 24 3-18 16 5 24-21-12-21 12 5-24L8 33l24-3z" fill="var(--goldSoft)" stroke="var(--gold)" stroke-linejoin="round" stroke-width="3"></path></svg>
+<div><h4>定番の考え方を借りられる</h4><p>マーケやデザインの基本の型が最初から入っています。ゼロから設計する時間をまるごと節約。</p></div>
+<span class="chip">型を借りる</span>
+</div>
+<div class="b">
+<svg aria-hidden="true" viewbox="0 0 84 84"><g fill="none" stroke="var(--gold)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"><path d="M14 66V50M34 66V38M54 66V26M74 66V14"></path></g><path d="M12 46l22-14 20-10 20-12" fill="none" stroke="var(--teal)" stroke-dasharray="2 7" stroke-linecap="round" stroke-width="3"></path></svg>
+<div><h4>自分の仕事に育てられる</h4><p>慣れたら、自分専用の手順をSkill化。使うほど、作業がどんどん速くなっていきます。</p></div>
+<span class="chip">成長</span>
+</div>
+</div>
+</div>
+</section>
+<section id="guide">
+  <div class="wrap">
+    <p class="kick">▼ このサイトの歩き方</p>
+    <h2>気になるところから、読み進めて大丈夫</h2>
+    <p class="lead">全体の流れを知りたい人は、導入ガイドから。個別のSkillを詳しく知りたい人は、7つのSkillのページへ。それぞれに具体例と出力イメージがあります。</p>
+    <div class="walk">
+      <a href="install.html"><div><b>導入ガイド</b><span class="d">ダウンロード、確認、コピー、認識の確認まで。画面イメージ付きで1ステップずつ。</span></div><span class="go2">ページを開く</span></a>
+      <a href="skills.html"><div><b>7つのSkill</b><span class="d">それぞれの使い道と、具体的な指示の例、出力イメージ、よくある質問を詳しく解説。</span></div><span class="go2">ページを開く</span></a>
+      <a href="start.html"><div><b>使い始め方</b><span class="d">架空の講座を例に、7つのSkillで1周する流れを紹介。注意点のチェックリストも。</span></div><span class="go2">ページを開く</span></a>
+      <a href="glossary.html"><div><b>用語集</b><span class="d">ZIP、コミット、MCPなど、初心者がつまずきやすい言葉を、やさしく説明。</span></div><span class="go2">ページを開く</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Claude Code Skills 超やさしいマニュアル</b>
+    <span>調査日 2026年10月5日。図解の画面と出力例は、説明用に作ったイメージ（架空の例）です。実際の見た目や出力とは異なる場合があります。</span>
+    <span>公式の保存先と読み込みについては、Claude Code公式ドキュメントのskillsのページを確認してください。</span>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

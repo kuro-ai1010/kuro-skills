@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>webapp-testing | Claude Code Skills 超やさしいマニュアル</title>
+<meta name="description" content="ボタンも表示も、自動で確かめてもらう">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>.nav a[aria-current="page"]{background:var(--accBg);color:var(--accFg);font-weight:700}</style>
+</head>
+<body class="page">
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="../index.html" style="color:inherit;text-decoration:none">Skills マニュアル</a>
+    <nav class="nav" aria-label="メニュー"><a href="../index.html">ホーム</a><a href="../install.html">導入ガイド</a><a href="../skills.html" aria-current="page">7つのSkill</a><a href="../start.html">使い始め方</a><a href="../glossary.html">用語集</a></nav>
+    <button class="tg" id="theme" aria-label="表示テーマを切り替え">◐</button>
+  </div>
+</header>
+
+<div class="phero"><div class="wrap"><div class="grid">
+  <div>
+    <p class="crumb"><a href="../index.html">ホーム</a> / <a href="../skills.html">7つのSkill</a> / webapp-testing</p>
+    <p class="kick">▼ Skill 6 / 7</p>
+    <h1 class="skname">webapp-testing</h1>
+    <p class="skline">ボタンも表示も、自動で確かめてもらう</p>
+    <div class="tagrow"><span class="tg2 ">A　Anthropic公式</span><span class="tg2 line">Apache-2.0</span><span class="tg2 line">要準備（Python、Playwright、対応ブラウザー）</span></div>
+    <div class="chips"><a href="#overview">概要</a><a href="#scenes">使う場面</a><a href="#prep">準備</a><a href="#steps">使い方</a><a href="#examples">具体例</a><a href="#tips">頼み方のコツ</a><a href="#can">できること</a><a href="#faq">よくある質問</a><a href="#info">導入情報</a></div>
+  </div>
+  <div class="vis" data-anim="">
+<button class="rp" data-replay="parent">もう一度</button>
+<div class="br2">
+<div class="bar"><i style="background:#C8CEDC"></i></div>
+<div class="pg"><i style="width:80%;background:#14213D;height:12px"></i><i style="width:92%"></i><i style="width:60%"></i><i style="width:75%"></i><div class="sc"></div></div>
+</div>
+<div class="tl">
+<div class="rv" style="--i:0"><span class="t">✔</span>スマホ幅の表示</div>
+<div class="rv" style="--i:1"><span class="t">✔</span>リンクの動作</div>
+<div class="rv" style="--i:2"><span class="t">✔</span>入力エラーの表示</div>
+<div class="rv" style="--i:3"><span class="t">📷</span>スクリーンショットを保存</div>
+</div>
+</div>
+</div></div></div>
+<section id="overview"><div class="wrap"><p class="kick">▼ 概要</p><h2>このSkillでできること</h2><div class="sum"><p>Python版のPlaywrightを使って、ローカルのWebアプリを実際に操作しながら確認するSkillです。ボタンの動作、画面表示、ブラウザのログ、スクリーンショットの確認に使えます。</p><p>LP制作のあとに入れると効果的。人の目だと見落としやすい「スマホ幅での崩れ」や「入力エラーの出方」を、まとめて点検できます。</p><p>フォルダーをコピーしただけでは動きません。Python、Playwright、対応ブラウザーなどの準備が別に必要で、7つの中では手間のかかる部類です。ほかのSkillに慣れてから取り組むと、つまずきにくいでしょう。</p></div></div></section><section id="scenes"><div class="wrap"><p class="kick">▼ 使う場面</p><h2>こんなときに頼れます</h2><div class="scn"><div><h4>LPが完成した直後の最終チェック</h4><p>表示崩れやリンク切れを、公開前にまとめて洗い出します。</p></div><div><h4>フォームの動作を確かめたいとき</h4><p>ダミーデータで、入力エラーや完了画面の出方を確認します。</p></div><div><h4>スマホ幅の表示を確認したいとき</h4><p>画面幅を変えて、レイアウトが崩れていないかを見てもらいます。</p></div><div><h4>修正したあとに、壊れていないか見たいとき</h4><p>直した箇所の前後を比べて、副作用がないか確かめます。</p></div></div></div></section><section id="prep"><div class="wrap"><p class="kick">▼ 使う前の準備</p><h2>用意しておくと、仕上がりが変わります</h2><div class="prep"><div class="chk" style="margin-top:0"><label><input type="checkbox">Python</label><label><input type="checkbox">Playwright（プロジェクト専用の環境で）</label><label><input type="checkbox">対応ブラウザー</label><label><input type="checkbox">確認したいページを動かす、ローカルの環境</label><label><input type="checkbox">ダミーデータ（実在の個人情報は使わない）</label><label><input type="checkbox">「購入・送信・外部公開は行わない」という指示</label></div><div class="tip" style="margin-top:0">準備は、Skillのコピーとは別の作業です。対象のOSと既存の環境を確認してから、プロジェクト専用の環境で進めましょう。</div></div></div></section><section id="steps"><div class="wrap"><p class="kick">▼ 使い方</p><h2>4つのステップで進める</h2><div class="flow" id="fl6" data-anim><div class="fs" style="--i:0"><div class="n">1</div><h4>環境を確認して準備する</h4><p>Python、Playwright、ブラウザーを、プロジェクト専用の環境に入れます。</p><span class="bar"></span></div><div class="fs" style="--i:1"><div class="n">2</div><h4>ローカルでページを動かす</h4><p>確認したいページを、自分のパソコンの中で表示できる状態にします。</p><span class="bar"></span></div><div class="fs" style="--i:2"><div class="n">3</div><h4>確認してほしい内容を頼む</h4><p>見たい項目を具体的に挙げ、「送信や購入はしない」と添えます。</p><span class="bar"></span></div><div class="fs" style="--i:3"><div class="n">4</div><h4>結果を見て修正に戻る</h4><p>問題点とスクリーンショットを見て、frontend-designで直す流れが基本です。</p><span class="bar"></span></div></div><div class="codebox">pip install playwright
+playwright install</div><p style="font-size:.88rem;color:var(--ink2)">上は一般的な手順の例です。版によって変わるため、最新の手順はPlaywright公式（Python）のページで確認してください。 <a href="https://playwright.dev/python/docs/intro" target="_blank" rel="noopener">Playwright for Python 公式ページ</a></p></div></section><section id="examples"><div class="wrap"><p class="kick">▼ 具体例</p><h2>こう頼むと、こう返ってきます</h2><p class="lead">場面ごとの指示と、出力のイメージです。出力はすべて、説明用に作った架空の例。実際の結果は、渡す材料によって変わります。</p>
+<div class="exm" id="ex-a">
+  <div class="exm-h"><span class="exl">具体例 A</span><h3>LPの表示と導線を確認する</h3></div>
+  <p class="sit">LPができた。公開の前に、スマホ幅とリンク、入力エラーを点検したい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/webapp-testing ローカルのLPで、スマホ幅の表示、リンク、入力エラーを確認して。購入・送信・外部公開は行わず、問題点とスクリーンショットをまとめて</p><button class="cp">コピー</button></div><div class="pt">「行わないこと」を先に書くのが肝心。確認だけにとどめる約束になります。</div></div>
+    <div><h4>▼ 確認結果の出力イメージ（架空の例）</h4><div class="out"><table><thead><tr><th>項目</th><th>結果</th><th>メモ</th></tr></thead><tbody><tr><td>スマホ幅の表示</td><td>要修正</td><td>申し込みボタンが画面の右にはみ出している</td></tr><tr><td>リンクの動作</td><td>問題なし</td><td>全リンクが正しく移動</td></tr><tr><td>入力エラー</td><td>問題なし</td><td>未入力時に案内文が表示された</td></tr></tbody></table></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-b">
+  <div class="exm-h"><span class="exl">具体例 B</span><h3>フォームの動作を確かめる</h3></div>
+  <p class="sit">問い合わせフォームの入力チェックが、期待通りか知りたい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/webapp-testing ローカルの問い合わせフォームで、必須項目を空のまま送信した場合と、正しいダミー情報を入れた場合の画面表示を確認して。実際の送信先には送らないで</p><button class="cp">コピー</button></div><div class="pt">「実際の送信先には送らない」を明記して、本物のデータを動かさない約束にします。</div></div>
+    <div><h4>▼ 確認結果の出力イメージ（架空の例）</h4><div class="out"><div class="orow"><b>空のまま送信</b><span>必須項目の下に、案内文が表示された</span></div><div class="orow"><b>ダミー情報で送信</b><span>完了画面に切り替わった（実送信なし）</span></div><div class="orow"><b>気づいた点</b><span>案内文の文字が小さく、スマホでは読みにくい</span></div></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-c">
+  <div class="exm-h"><span class="exl">具体例 C</span><h3>ブラウザのエラーログを調べる</h3></div>
+  <p class="sit">見た目は問題ないが、裏でエラーが出ていないか気になる。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/webapp-testing ローカルのページを開いて、ブラウザのコンソールにエラーが出ていないか確認して。出ていれば内容と、考えられる原因を教えて</p><button class="cp">コピー</button></div><div class="pt">原因の見立てまで頼むと、そのまま修正の指示に使えます。</div></div>
+    <div><h4>▼ 確認結果の出力イメージ（架空の例）</h4><div class="out"><div class="orow"><b>エラー</b><span>1件（画像ファイルが見つからない）</span></div><div class="orow"><b>考えられる原因</b><span>画像のファイル名とHTMLの記述が一致していない</span></div><div class="orow"><b>次の一手</b><span>ファイル名を確認して、frontend-designで修正を依頼</span></div></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-d">
+  <div class="exm-h"><span class="exl">具体例 D</span><h3>修正の前後を見比べる</h3></div>
+  <p class="sit">ボタン周りを直した。ほかが崩れていないか確認したい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/webapp-testing 修正した部分（申し込みボタン周辺）を、スマホ幅とパソコン幅の両方でスクリーンショットに撮って。見た目が崩れていないか確認して</p><button class="cp">コピー</button></div><div class="pt">確認する場所と画面幅を絞ると、結果が読みやすくなります。</div></div>
+    <div><h4>▼ 確認結果の出力イメージ（架空の例）</h4><div class="out"><ul><li>スマホ幅　ボタンが画面内に収まっている</li><li>パソコン幅　余白のバランスに問題なし</li><li>スクリーンショット2枚を保存</li></ul></div></div>
+  </div>
+</div></div></section><section id="tips"><div class="wrap"><p class="kick">▼ 頼み方のコツ</p><h2>ひと工夫で、返ってくる質が変わる</h2><div class="vsrow"><div class="vsb bad"><span class="vl">✘ ありがちな頼み方</span><p>サイトをテストして</p></div><div class="vsb good"><span class="vl">✔ おすすめの頼み方</span><p>/webapp-testing ローカルのLPで、スマホ幅の表示、リンク、入力エラーを確認して。購入・送信・外部公開は行わず、問題点とスクリーンショットをまとめて</p><button class="cp">コピー</button></div><p class="vsp">対象、確認項目、やらないことを揃えると、安全で読みやすい結果が返ります。</p></div><div class="vsrow"><div class="vsb bad"><span class="vl">✘ ありがちな頼み方</span><p>本番のサイトで申し込みまで試して</p></div><div class="vsb good"><span class="vl">✔ おすすめの頼み方</span><p>ローカルのページで、ダミーデータだけを使って確認して。購入・送信・外部公開は行わないで</p><button class="cp">コピー</button></div><p class="vsp">初回はダミーデータとローカル環境で。本物のデータや決済を動かさないのが鉄則です。</p></div></div></section><section id="can"><div class="wrap"><p class="kick">▼ できること、できないこと</p><h2>得意なこと、任せられないこと</h2><div class="cc"><div class="yes"><h4>得意なこと</h4><ul><li>ボタンや入力欄の操作確認</li><li>画面表示、ブラウザログ、スクリーンショットの確認</li><li>LP制作後の点検</li></ul></div><div class="no"><h4>任せられないこと</h4><ul><li>環境の準備そのもの（Skillのコピーだけでは入らない）</li><li>本番の購入や送信を試すこと（行わない前提で使う）</li><li>品質や安全性の保証</li></ul></div></div></div></section><section id="faq"><div class="wrap"><p class="kick">▼ よくある質問</p><h2>つまずきやすいところ</h2><div class="faq"><details><summary>準備が難しそうで不安です</summary><p>最初はプロジェクト専用の環境で、Playwright公式の手順に沿って進めましょう。迷ったら、環境の確認から手伝ってもらう頼み方もできます。</p></details><details><summary>実機のスマホでも確認できますか？</summary><p>ここで確認できるのは、ブラウザの画面幅を変えた表示です。実機での見え方は、別途自分で確かめると確実です。</p></details><details><summary>なぜダミーデータなのですか？</summary><p>同梱のヘルパーは、指定されたサーバー起動コマンドをシェルで実行します。初回は、ダミーデータとローカル環境で、影響の少ない形から試すのが安全です。</p></details></div></div></section><section id="info"><div class="wrap"><p class="kick">▼ 導入情報</p><h2>導入するときに確認すること</h2><dl class="metat"><dt>導入元</dt><dd>A　skills/webapp-testing</dd><dt>コピー先</dt><dd>&lt;保存先&gt;/webapp-testing</dd><dt>確認するファイル</dt><dd>&lt;保存先&gt;/webapp-testing/SKILL.md</dd><dt>依存関係</dt><dd>Python、Playwright、対応ブラウザー。加えて、対象アプリを動かす環境が必要</dd><dt>ライセンス</dt><dd>Apache-2.0</dd><dt>確認したSKILL.md</dt><dd><a href="https://github.com/anthropics/skills/blob/8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4/skills/webapp-testing/SKILL.md" target="_blank" rel="noopener">GitHubで開く</a>（確認時のコミットに固定したページ）</dd></dl><div class="warn" style="margin-top:22px"><b>注意</b>　同梱ヘルパーは、指定されたサーバー起動コマンドをシェルで実行します。初回はダミーデータとローカル環境で試してください。</div></div></section><div class="wrap"><div class="pager"><a class="pg" href="frontend-design.html"><small>前のSkill</small><b>5　frontend-design</b><span>文章を、スマホでも読みやすい画面に作る</span></a><a class="pg next" href="skill-creator.html"><small>次のSkill</small><b>7　skill-creator</b><span>繰り返す仕事を、自分専用のSkillにする</span></a></div></div>
+<footer>
+  <div class="wrap">
+    <b>Claude Code Skills 超やさしいマニュアル</b>
+    <span>調査日 2026年10月5日。図解の画面と出力例は、説明用に作ったイメージ（架空の例）です。実際の見た目や出力とは異なる場合があります。</span>
+    <span>公式の保存先と読み込みについては、Claude Code公式ドキュメントのskillsのページを確認してください。</span>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

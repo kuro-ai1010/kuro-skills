@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>skill-creator | Claude Code Skills 超やさしいマニュアル</title>
+<meta name="description" content="よく使う指示を、自分専用のSkillに育てる">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>.nav a[aria-current="page"]{background:var(--accBg);color:var(--accFg);font-weight:700}</style>
+</head>
+<body class="page">
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="../index.html" style="color:inherit;text-decoration:none">Skills マニュアル</a>
+    <nav class="nav" aria-label="メニュー"><a href="../index.html">ホーム</a><a href="../install.html">導入ガイド</a><a href="../skills.html" aria-current="page">7つのSkill</a><a href="../start.html">使い始め方</a><a href="../glossary.html">用語集</a></nav>
+    <button class="tg" id="theme" aria-label="表示テーマを切り替え">◐</button>
+  </div>
+</header>
+
+<div class="phero"><div class="wrap"><div class="grid">
+  <div>
+    <p class="crumb"><a href="../index.html">ホーム</a> / <a href="../skills.html">7つのSkill</a> / skill-creator</p>
+    <p class="kick">▼ Skill 7 / 7</p>
+    <h1 class="skname">skill-creator</h1>
+    <p class="skline">よく使う指示を、自分専用のSkillに育てる</p>
+    <div class="tagrow"><span class="tg2 ">A　Anthropic公式</span><span class="tg2 line">Apache-2.0</span><span class="tg2 line">草案づくりは追加の準備なし（自動評価にはPython、claude CLIなど）</span></div>
+    <div class="chips"><a href="#overview">概要</a><a href="#scenes">使う場面</a><a href="#prep">準備</a><a href="#steps">使い方</a><a href="#examples">具体例</a><a href="#tips">頼み方のコツ</a><a href="#can">できること</a><a href="#faq">よくある質問</a><a href="#info">導入情報</a></div>
+  </div>
+  <div class="vis" data-anim="">
+<div class="cyc">
+<div class="rg"></div>
+<span class="nd">手順を整理</span><span class="nd">草案を作る</span><span class="nd">テストする</span><span class="nd">改善する</span>
+<div class="ct">自分専用<br/>Skill</div>
+</div>
+<p style="text-align:center;margin-top:14px;color:#9FAACB;font-size:.78rem">回すほど、使いやすい手順書に育ちます。</p>
+</div>
+</div></div></div>
+<section id="overview"><div class="wrap"><p class="kick">▼ 概要</p><h2>このSkillでできること</h2><div class="sum"><p>繰り返し使う手順を、独自のSkillにまとめるSkillです。例題で試して、直して、また試す。そんな改善の流れまで含めて、手伝ってもらえます。</p><p>「毎回、長い指示を貼っている」仕事が見つかったら出番です。記事の構成チェック、講座案からSNS下書きへの変換などが候補になります。</p><p>おすすめのタイミングは、最初の6つを何度か使って、安定した手順が見えてきたあと。いきなり作るより、実際に使った経験がそのまま材料になります。</p><p>説明文の自動評価・改善は別枠で、認証済みのclaude CLIを使い、実行量に応じて利用枠を消費します。まずは草案づくりだけで十分です。</p></div></div></section><section id="scenes"><div class="wrap"><p class="kick">▼ 使う場面</p><h2>こんなときに頼れます</h2><div class="scn"><div><h4>同じ指示を何度も貼っているとき</h4><p>貼る回数が増えたら、Skill化のサインです。</p></div><div><h4>出力のバラつきを減らしたいとき</h4><p>手順とチェック項目を固定すれば、仕上がりが安定します。</p></div><div><h4>公開前のチェック漏れを防ぎたいとき</h4><p>確認項目をSkillに入れておけば、毎回同じ観点で点検できます。</p></div><div><h4>自分の得意な書き方を再現したいとき</h4><p>うまくいった例を材料にして、自分流の型を手順にします。</p></div></div></div></section><section id="prep"><div class="wrap"><p class="kick">▼ 使う前の準備</p><h2>用意しておくと、仕上がりが変わります</h2><div class="prep"><div class="chk" style="margin-top:0"><label><input type="checkbox">繰り返している作業の説明</label><label><input type="checkbox">うまくいった入力と出力の例</label><label><input type="checkbox">必要な入力と、出力の形式</label><label><input type="checkbox">公開前に確認したい項目</label><label><input type="checkbox">自動評価を使う場合は、Python、PyYAML、認証済みのclaude CLI</label></div><div class="tip" style="margin-top:0">最初の草案づくりには、上のうち最初の4つがあれば足ります。</div></div></div></section><section id="steps"><div class="wrap"><p class="kick">▼ 使い方</p><h2>4つのステップで進める</h2><div class="flow" id="fl7" data-anim><div class="fs" style="--i:0"><div class="n">1</div><h4>手順を洗い出す</h4><p>いつもやっている作業を、順番に書き出します。入力と出力もセットで。</p><span class="bar"></span></div><div class="fs" style="--i:1"><div class="n">2</div><h4>草案とテスト例を作る</h4><p>Skillの草案と、試すための例題を数件つくってもらいます。</p><span class="bar"></span></div><div class="fs" style="--i:2"><div class="n">3</div><h4>試して、直す</h4><p>例題で動かして、気になる点を伝えます。何度か繰り返すうちに、安定していきます。</p><span class="bar"></span></div><div class="fs" style="--i:3"><div class="n">4</div><h4>skillsフォルダーに置く</h4><p>他のSkillと同じように、&lt;保存先&gt;/&lt;Skill名&gt;/SKILL.md の形で置きます。</p><span class="bar"></span></div></div></div></section><section id="examples"><div class="wrap"><p class="kick">▼ 具体例</p><h2>こう頼むと、こう返ってきます</h2><p class="lead">場面ごとの指示と、出力のイメージです。出力はすべて、説明用に作った架空の例。実際の結果は、渡す材料によって変わります。</p>
+<div class="exm" id="ex-a">
+  <div class="exm-h"><span class="exl">具体例 A</span><h3>SNS下書きの手順をSkill化する</h3></div>
+  <p class="sit">記事からSNS下書きを作る作業を、毎回同じ指示で頼んでいる。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/skill-creator 記事からSNS下書きを作る手順をSkill化したい。必要な入力、出力形式、公開前の確認項目を整理して、まず草案とテスト例を3件作って</p><button class="cp">コピー</button></div><div class="pt">「まず草案とテスト例を3件」と、範囲を絞って頼むのがコツ。自動評価は後回しにできます。</div></div>
+    <div><h4>▼ 草案の出力イメージ（架空の例）</h4><div class="out"><div class="orow"><b>name</b><span>sns-draft-from-article（例）</span></div><div class="orow"><b>説明</b><span>記事の本文から、媒体別のSNS下書きを作る手順</span></div><div class="orow"><b>入力</b><span>記事の本文、媒体と本数、トーンの希望</span></div><div class="orow"><b>出力</b><span>媒体別の下書き。元の記事にない数値は使わない</span></div><div class="orow"><b>公開前の確認</b><span>数字と体験談が元の記事にあるか、誇張がないか</span></div></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-b">
+  <div class="exm-h"><span class="exl">具体例 B</span><h3>記事の構成チェックをSkill化する</h3></div>
+  <p class="sit">公開前に毎回、同じ観点で記事を見直している。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/skill-creator 公開前の記事をチェックする手順をSkill化したい。見出しの流れ、専門用語の説明、誇張表現の有無を確認する項目にして。まず草案を出して</p><button class="cp">コピー</button></div><div class="pt">チェックしたい観点を先に挙げると、抜けのない手順になります。</div></div>
+    <div><h4>▼ チェック項目の出力イメージ（架空の例）</h4><div class="out"><ul><li>見出しの流れが、読者の疑問の順になっているか</li><li>専門用語に、短い説明がついているか</li><li>強い断定や、根拠のない数字がないか</li><li>最後に、読者の次の行動が示されているか</li></ul></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-c">
+  <div class="exm-h"><span class="exl">具体例 C</span><h3>講座の企画メモをLP原稿に変える</h3></div>
+  <p class="sit">企画メモから、販売ページの原稿を作る流れを定型化したい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/skill-creator 講座の企画メモから、販売ページの原稿の下書きを作る手順をSkill化したい。必要な入力と、出力の形式を先に整理して。テスト例は2件</p><button class="cp">コピー</button></div><div class="pt">入力と出力を先に決めると、使うたびに結果が揃います。</div></div>
+    <div><h4>▼ 入力と出力の整理イメージ（架空の例）</h4><div class="out"><table><thead><tr><th></th><th>内容</th></tr></thead><tbody><tr><td>入力</td><td>対象者、悩み、学べること、含まれるもの、確認済みの価格</td></tr><tr><td>出力</td><td>見出し、本文、ボタン文言までの原稿。未確認の項目は「要確認」と表示</td></tr></tbody></table></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-d">
+  <div class="exm-h"><span class="exl">具体例 D</span><h3>説明文の自動評価に進む（上級）</h3></div>
+  <p class="sit">作ったSkillが、思った場面で呼び出されない。説明文を改善したい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/skill-creator 作ったSkillのdescriptionを、呼び出されやすい文章に改善したい。自動評価は、利用枠を確認してから実行したいので、先に手順だけ教えて</p><button class="cp">コピー</button></div><div class="pt">利用枠を消費する作業は、手順の確認から。実行は、自分で判断してからにしましょう。</div></div>
+    <div><h4>▼ 手順の出力イメージ（架空の例）</h4><div class="out"><ul><li>必要なもの　Python、PyYAML、認証済みのclaude CLI</li><li>評価の前に、テスト用の依頼文を用意する</li><li>実行量に応じて、利用枠を消費する</li><li>Windowsネイティブより、WSL、Linux、macOSが無難</li></ul></div></div>
+  </div>
+</div></div></section><section id="tips"><div class="wrap"><p class="kick">▼ 頼み方のコツ</p><h2>ひと工夫で、返ってくる質が変わる</h2><div class="vsrow"><div class="vsb bad"><span class="vl">✘ ありがちな頼み方</span><p>便利なSkillを作って</p></div><div class="vsb good"><span class="vl">✔ おすすめの頼み方</span><p>/skill-creator 記事からSNS下書きを作る手順をSkill化したい。必要な入力、出力形式、公開前の確認項目を整理して、まず草案とテスト例を3件作って</p><button class="cp">コピー</button></div><p class="vsp">どの作業を、どんな形にしたいのか。具体的な作業名を伝えると、使えるSkillの草案になります。</p></div><div class="vsrow"><div class="vsb bad"><span class="vl">✘ ありがちな頼み方</span><p>全部おまかせで、自動評価まで</p></div><div class="vsb good"><span class="vl">✔ おすすめの頼み方</span><p>まず草案とテスト例3件まで。自動評価は、利用枠を確認してから別に頼みます</p><button class="cp">コピー</button></div><p class="vsp">自動評価は利用枠を消費します。草案づくりと分けて、段階を踏みましょう。</p></div></div></section><section id="can"><div class="wrap"><p class="kick">▼ できること、できないこと</p><h2>得意なこと、任せられないこと</h2><div class="cc"><div class="yes"><h4>得意なこと</h4><ul><li>繰り返し手順のSkill化（草案づくり）</li><li>テスト例の作成と改善の繰り返し</li><li>説明文の改善（自動評価は環境が整えば）</li></ul></div><div class="no"><h4>任せられないこと</h4><ul><li>利用枠の消費を肩代わりすること</li><li>Windowsネイティブでの評価機能の動作保証（実動作テストは未実施）</li><li>作ったSkillの品質の保証</li></ul></div></div></div></section><section id="faq"><div class="wrap"><p class="kick">▼ よくある質問</p><h2>つまずきやすいところ</h2><div class="faq"><details><summary>作ったSkillはどこに置きますか？</summary><p>他のSkillと同じです。&lt;保存先&gt;/&lt;Skill名&gt;/SKILL.md の形で、skillsフォルダーに置きます。</p></details><details><summary>自動評価は必須ですか？</summary><p>必須ではありません。草案づくりだけで、まず十分に役立ちます。</p></details><details><summary>Windowsでも使えますか？</summary><p>草案づくりは問題ありません。評価機能は、確認した版のスクリプトの仕様上、WSL、Linux、macOSが無難という判断です。Windowsネイティブでの実動作テストは未実施です。</p></details><details><summary>利用枠はどれくらい減りますか？</summary><p>説明文の自動評価・改善では、認証済みのclaude CLIを使い、実行量に応じて利用枠を消費します。最初は小さく試しましょう。</p></details></div></div></section><section id="info"><div class="wrap"><p class="kick">▼ 導入情報</p><h2>導入するときに確認すること</h2><dl class="metat"><dt>導入元</dt><dd>A　skills/skill-creator</dd><dt>コピー先</dt><dd>&lt;保存先&gt;/skill-creator</dd><dt>確認するファイル</dt><dd>&lt;保存先&gt;/skill-creator/SKILL.md</dd><dt>依存関係</dt><dd>ヘルパー利用にPython、一部の検証にPyYAML。説明文の自動評価・改善には認証済みのclaude CLI</dd><dt>ライセンス</dt><dd>Apache-2.0</dd><dt>確認したSKILL.md</dt><dd><a href="https://github.com/anthropics/skills/blob/8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4/skills/skill-creator/SKILL.md" target="_blank" rel="noopener">GitHubで開く</a>（確認時のコミットに固定したページ）</dd></dl><div class="warn" style="margin-top:22px"><b>注意</b>　自動評価は利用枠を消費します。評価機能は、WSL、Linux、macOSでの利用が無難です（Windowsネイティブでの実動作テストは未実施）。</div></div></section><div class="wrap"><div class="pager"><a class="pg" href="webapp-testing.html"><small>前のSkill</small><b>6　webapp-testing</b><span>作ったページを、自動で操作して動作確認する</span></a><a class="pg next" href="../start.html"><small>次は</small><b>使い始め方</b><span>7つで1周する流れと、注意点のチェック</span></a></div></div>
+<footer>
+  <div class="wrap">
+    <b>Claude Code Skills 超やさしいマニュアル</b>
+    <span>調査日 2026年10月5日。図解の画面と出力例は、説明用に作ったイメージ（架空の例）です。実際の見た目や出力とは異なる場合があります。</span>
+    <span>公式の保存先と読み込みについては、Claude Code公式ドキュメントのskillsのページを確認してください。</span>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

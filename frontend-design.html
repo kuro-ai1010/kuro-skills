@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>frontend-design | Claude Code Skills 超やさしいマニュアル</title>
+<meta name="description" content="文章を、スマホでも読める「画面」にする">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>.nav a[aria-current="page"]{background:var(--accBg);color:var(--accFg);font-weight:700}</style>
+</head>
+<body class="page">
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="../index.html" style="color:inherit;text-decoration:none">Skills マニュアル</a>
+    <nav class="nav" aria-label="メニュー"><a href="../index.html">ホーム</a><a href="../install.html">導入ガイド</a><a href="../skills.html" aria-current="page">7つのSkill</a><a href="../start.html">使い始め方</a><a href="../glossary.html">用語集</a></nav>
+    <button class="tg" id="theme" aria-label="表示テーマを切り替え">◐</button>
+  </div>
+</header>
+
+<div class="phero"><div class="wrap"><div class="grid">
+  <div>
+    <p class="crumb"><a href="../index.html">ホーム</a> / <a href="../skills.html">7つのSkill</a> / frontend-design</p>
+    <p class="kick">▼ Skill 5 / 7</p>
+    <h1 class="skname">frontend-design</h1>
+    <p class="skline">文章を、スマホでも読める「画面」にする</p>
+    <div class="tagrow"><span class="tg2 ">A　Anthropic公式</span><span class="tg2 line">Apache-2.0</span><span class="tg2 line">Skill自体は追加の準備なし（作るサイトによってNode.jsなどが必要）</span></div>
+    <div class="chips"><a href="#overview">概要</a><a href="#scenes">使う場面</a><a href="#prep">準備</a><a href="#steps">使い方</a><a href="#examples">具体例</a><a href="#tips">頼み方のコツ</a><a href="#can">できること</a><a href="#faq">よくある質問</a><a href="#info">導入情報</a></div>
+  </div>
+  <div class="vis" data-anim="">
+<button class="rp" data-replay="parent">もう一度</button>
+<div class="phone">
+<div class="hero2"></div>
+<i style="--i:0;--w:90%"></i><i style="--i:1;--w:70%"></i><i style="--i:2;--w:82%"></i><i style="--i:3;--w:50%"></i>
+<div class="bt"></div>
+</div>
+<div class="pal"><i style="background:#14213D"></i><i style="background:#A27A28"></i><i style="background:#E4EAF6"></i><i style="background:#16756A"></i></div>
+<p style="text-align:center;margin-top:10px;color:#9FAACB;font-size:.78rem">配色、文字、余白を整えて、スマホでも読みやすく。</p>
+</div>
+</div></div></div>
+<section id="overview"><div class="wrap"><p class="kick">▼ 概要</p><h2>このSkillでできること</h2><div class="sum"><p>配色、文字、余白、構成を考えながら、Webの画面を作るSkillです。講座LP、無料資料の紹介ページ、簡単な診断ページなど、文章を実際の画面にする場面で役に立ちます。</p><p>画像生成専用のツールではありません。主な対象は、WebのUIと、その実装（コード）。見た目の判断と、作る作業を、まとめて任せられるイメージです。</p><p>最初は、HTMLとCSSでローカル確認できる形から始めるのが安心。公開、決済、メール配信は別の設定が必要なので、依頼文で「まだ行わない」と添えておきます。</p></div></div></section><section id="scenes"><div class="wrap"><p class="kick">▼ 使う場面</p><h2>こんなときに頼れます</h2><div class="scn"><div><h4>販売文をLPにしたいとき</h4><p>copywritingで作った原稿を、そのままページの形にします。</p></div><div><h4>無料配布の紹介ページを作るとき</h4><p>資料の内容を伝えるシンプルなページを、短時間で形にできます。</p></div><div><h4>簡単な診断ページを作りたいとき</h4><p>質問に答えると結果が出る、画面の中だけで動く形から始められます。</p></div><div><h4>スマホでの見え方を整えたいとき</h4><p>文字の大きさや余白を、スマホ基準で調整してもらいます。</p></div></div></div></section><section id="prep"><div class="wrap"><p class="kick">▼ 使う前の準備</p><h2>用意しておくと、仕上がりが変わります</h2><div class="prep"><div class="chk" style="margin-top:0"><label><input type="checkbox">画面にしたい文章（copywritingの出力など）</label><label><input type="checkbox">雰囲気の希望（落ち着いた、信頼感があるなど）</label><label><input type="checkbox">必ず入れたい要素（ボタンの位置、入力欄など）</label><label><input type="checkbox">スマホ中心か、パソコン中心か</label><label><input type="checkbox">「公開や決済接続は今回しない」という方針</label></div><div class="tip" style="margin-top:0">コードが分からなくても大丈夫。できたファイルをブラウザで開いて、見た感想を言葉で伝えれば直してもらえます。</div></div></div></section><section id="steps"><div class="wrap"><p class="kick">▼ 使い方</p><h2>4つのステップで進める</h2><div class="flow" id="fl5" data-anim><div class="fs" style="--i:0"><div class="n">1</div><h4>文章と希望を渡す</h4><p>原稿と、雰囲気や必須要素をまとめて伝えます。</p><span class="bar"></span></div><div class="fs" style="--i:1"><div class="n">2</div><h4>ローカルで確認できる形で作る</h4><p>HTMLとCSSなら、できたファイルをブラウザで開くだけ。公開はまだしません。</p><span class="bar"></span></div><div class="fs" style="--i:2"><div class="n">3</div><h4>見て、言葉で直す</h4><p>「見出しを大きく」「余白を広めに」など、具体的に頼みます。</p><span class="bar"></span></div><div class="fs" style="--i:3"><div class="n">4</div><h4>webapp-testingで確認する</h4><p>表示と導線のチェックは、6つ目のSkillに任せます。</p><span class="bar"></span></div></div></div></section><section id="examples"><div class="wrap"><p class="kick">▼ 具体例</p><h2>こう頼むと、こう返ってきます</h2><p class="lead">場面ごとの指示と、出力のイメージです。出力はすべて、説明用に作った架空の例。実際の結果は、渡す材料によって変わります。</p>
+<div class="exm" id="ex-a">
+  <div class="exm-h"><span class="exl">具体例 A</span><h3>講座のLPを作る</h3></div>
+  <p class="sit">販売文ができた。スマホで読みやすい1ページにしたい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/frontend-design この販売文で、スマホでも読みやすい1ページの講座LPを作って。最初はHTMLとCSSでローカル確認できる形に。公開や決済接続はまだ行わないで</p><button class="cp">コピー</button></div><div class="pt">「公開や決済接続はまだ行わない」を添えて、作業の範囲を限定します。</div></div>
+    <div><h4>▼ 出力イメージ（架空の例）</h4><div class="out"><div class="orow"><b>作られるもの</b><span>index.html と style.css（例）</span></div><div class="orow"><b>構成</b><span>ファーストビュー、悩みへの共感、学べること、含まれるもの、申し込みボタン</span></div><div class="orow"><b>確認方法</b><span>index.html をダブルクリックして、ブラウザで開く</span></div><div class="orow"><b>まだしないこと</b><span>公開、決済の接続、メール配信の設定</span></div></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-b">
+  <div class="exm-h"><span class="exl">具体例 B</span><h3>無料資料の紹介ページを作る</h3></div>
+  <p class="sit">ミニガイドの配布ページを作りたい。メール登録の導線は見た目だけ。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/frontend-design 無料PDFガイドの紹介ページを作って。上に資料の表紙イメージ枠、中ほどに内容の説明、下にメールアドレス入力欄のデザインだけ置いて。送信の仕組みはまだ作らないで</p><button class="cp">コピー</button></div><div class="pt">「デザインだけ」「仕組みは作らない」と分けると、安全にレイアウトの確認ができます。</div></div>
+    <div><h4>▼ 出力イメージ（架空の例）</h4><div class="out"><div class="orow"><b>上部</b><span>表紙イメージの枠とタイトル</span></div><div class="orow"><b>中ほど</b><span>ガイドで分かることを短くまとめた説明</span></div><div class="orow"><b>下部</b><span>メールアドレス入力欄と登録ボタンのデザイン（送信はしない）</span></div></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-c">
+  <div class="exm-h"><span class="exl">具体例 C</span><h3>簡単な診断ページを作る</h3></div>
+  <p class="sit">3つの質問に答えると、タイプ別のコメントが出るページを作りたい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/frontend-design 3問の質問に答えると、タイプ別のコメントが出る簡単な診断ページを作って。画面の中だけで動く形で、データの保存や送信はしないで</p><button class="cp">コピー</button></div><div class="pt">回答を保存しない、と明記。個人情報を扱わない安全な試作になります。</div></div>
+    <div><h4>▼ 出力イメージ（架空の例）</h4><div class="out"><div class="orow"><b>質問</b><span>3問。選択肢を選ぶと次へ進む。</span></div><div class="orow"><b>結果</b><span>回答の組み合わせに応じて、タイプ別のコメントを表示</span></div><div class="orow"><b>保存</b><span>なし（画面の中だけで動作）</span></div></div></div>
+  </div>
+</div>
+<div class="exm" id="ex-d">
+  <div class="exm-h"><span class="exl">具体例 D</span><h3>雰囲気を変える</h3></div>
+  <p class="sit">できたページが派手すぎる。落ち着いた印象にしたい。</p>
+  <div class="exm-g">
+    <div><h4>▼ Claudeへの指示</h4><div class="prompt"><p>/frontend-design いまのLPを、もう少し落ち着いた雰囲気に。色は2色までに絞り、文字を大きめに、余白を広めにして</p><button class="cp">コピー</button></div><div class="pt">色の数、文字の大きさ、余白。変えたい要素を具体的に挙げると、狙い通りに直ります。</div></div>
+    <div><h4>▼ 変更点の出力イメージ（架空の例）</h4><div class="out"><ul><li>配色を紺と白の2色に整理</li><li>本文の文字サイズを一段階大きく</li><li>セクション間の余白を広げた</li><li>ボタンの色を1色に統一</li></ul></div></div>
+  </div>
+</div></div></section><section id="tips"><div class="wrap"><p class="kick">▼ 頼み方のコツ</p><h2>ひと工夫で、返ってくる質が変わる</h2><div class="vsrow"><div class="vsb bad"><span class="vl">✘ ありがちな頼み方</span><p>かっこいいサイトを作って</p></div><div class="vsb good"><span class="vl">✔ おすすめの頼み方</span><p>/frontend-design この販売文で、スマホでも読みやすい1ページの講座LPを作って。最初はHTMLとCSSでローカル確認できる形に。公開や決済接続はまだ行わないで</p><button class="cp">コピー</button></div><p class="vsp">用途、デバイス、範囲を伝えると、狙いに合った画面になります。</p></div><div class="vsrow"><div class="vsb bad"><span class="vl">✘ ありがちな頼み方</span><p>もっといい感じにして</p></div><div class="vsb good"><span class="vl">✔ おすすめの頼み方</span><p>見出しを大きく、ボタンを目立たせて。背景は白に近い色に</p><button class="cp">コピー</button></div><p class="vsp">直したい点を、見た目の言葉で具体的に。修正の往復が減ります。</p></div></div></section><section id="can"><div class="wrap"><p class="kick">▼ できること、できないこと</p><h2>得意なこと、任せられないこと</h2><div class="cc"><div class="yes"><h4>得意なこと</h4><ul><li>配色、文字、余白、構成の設計</li><li>HTMLとCSSでのページ制作</li><li>ローカルで確認できる形づくり</li></ul></div><div class="no"><h4>任せられないこと</h4><ul><li>画像の生成（このSkillの対象はWebのUIと実装）</li><li>ホスティング、決済、メール配信の設定（別途必要）</li><li>売上や成果の保証</li></ul></div></div></div></section><section id="faq"><div class="wrap"><p class="kick">▼ よくある質問</p><h2>つまずきやすいところ</h2><div class="faq"><details><summary>コードが分からなくても使えますか？</summary><p>使えます。できたファイルを開いて、見た印象を言葉で伝える。この繰り返しで進められます。</p></details><details><summary>必要な環境は？</summary><p>Skill自体に必須の追加ランタイムはありません。作るサイトの構成によって、Node.jsなどが必要になることがあります。</p></details><details><summary>そのまま公開できますか？</summary><p>公開、決済、メール配信は別の設定です。まずローカルで形にして、公開は慎重に別の工程で。</p></details></div></div></section><section id="info"><div class="wrap"><p class="kick">▼ 導入情報</p><h2>導入するときに確認すること</h2><dl class="metat"><dt>導入元</dt><dd>A　skills/frontend-design</dd><dt>コピー先</dt><dd>&lt;保存先&gt;/frontend-design</dd><dt>確認するファイル</dt><dd>&lt;保存先&gt;/frontend-design/SKILL.md</dd><dt>依存関係</dt><dd>Skill自体に必須の追加ランタイムはない。作るサイトの構成次第でNode.jsなどが必要</dd><dt>ライセンス</dt><dd>Apache-2.0</dd><dt>確認したSKILL.md</dt><dd><a href="https://github.com/anthropics/skills/blob/8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4/skills/frontend-design/SKILL.md" target="_blank" rel="noopener">GitHubで開く</a>（確認時のコミットに固定したページ）</dd></dl><div class="warn" style="margin-top:22px"><b>注意</b>　ホスティング、決済、メール配信は別途設定が必要です。最初はローカルで見るところまでにしましょう。</div></div></section><div class="wrap"><div class="pager"><a class="pg" href="social.html"><small>前のSkill</small><b>4　social</b><span>1本の素材を、媒体ごとの投稿に展開する</span></a><a class="pg next" href="webapp-testing.html"><small>次のSkill</small><b>6　webapp-testing</b><span>作ったページを、自動で操作して動作確認する</span></a></div></div>
+<footer>
+  <div class="wrap">
+    <b>Claude Code Skills 超やさしいマニュアル</b>
+    <span>調査日 2026年10月5日。図解の画面と出力例は、説明用に作ったイメージ（架空の例）です。実際の見た目や出力とは異なる場合があります。</span>
+    <span>公式の保存先と読み込みについては、Claude Code公式ドキュメントのskillsのページを確認してください。</span>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
